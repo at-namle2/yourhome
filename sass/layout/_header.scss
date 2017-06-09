@@ -1,0 +1,111 @@
+.header-infor {
+  background: map-get($color, gray);
+  height: 40px;
+  .infor-domain {
+    padding-top: 8px;
+    .contact {
+      float: left;
+      .infor-email {
+        display: inline-block;
+        .fe {
+          padding-right: 10px;
+        }
+        &.email {
+          padding-left: 10px;
+        }
+      }
+    }
+    .social-page {
+      float: right;
+      .social {
+        @extend %mr-pd;
+        .social-item {
+          display: inline-block;
+          padding-right: 10px;
+          .social-a {
+            display: block;
+            width: 25px;
+            height: 25px;
+            &:hover {
+              @include border-radius(50%);
+              background: map-get($color, green);
+              border-radius: 50%;
+            }
+            .fas {
+              color: map-get($color, gray-2);
+              &:hover {
+                color: map-get($color, white);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.yourhome {
+  .logo {
+    float: left;
+    .img-logo {
+      width: 288px;
+      height: 66px;
+    }
+  }
+  .nav-bar {
+    float: right;
+    padding: 30px 0;
+    .main-menu {
+      @extend %mr-pd;
+      .main-menu-item {
+        display: inline-block;
+        margin-right: 10px;
+        .menu-a {
+          color: map-get($color, black);
+          text-decoration: none;
+          padding: 10px 20px;
+          &:hover {
+            background: map-get($color, green);
+            border-radius: 30px;
+            color: map-get($color, white);
+          }
+          .fadown {
+            padding-left: 5px;
+          }
+        }
+        .active {
+          color: map-get($color, white);
+          text-decoration: none;
+          background: map-get($color, green);
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+}
+.slides {
+  background: url(../images/slide/slide1.jpg) no-repeat;
+  background-size: cover;
+  height: 580px;
+  .hours {
+    display: block;
+    padding: 280px 0;
+    line-height: 44px;
+    color: map-get($color, white);
+    .desc-slide {
+      padding: 14px 0 20px;
+    }
+    .read-more {
+      display: inline-block;
+      padding: 3px 28px;
+      background: map-get($color, green);
+      border: 2px solid map-get($color, green);
+      &:hover {
+        background: transparent;
+      }
+      .read-a {
+        color: map-get($color, white);
+        text-decoration: none;
+      }
+    }
+  }
+}
