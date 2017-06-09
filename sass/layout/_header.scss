@@ -29,7 +29,6 @@
             &:hover {
               @include border-radius(50%);
               background: map-get($color, green);
-              border-radius: 50%;
             }
             .fas {
               color: map-get($color, gray-2);
