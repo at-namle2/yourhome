@@ -3,12 +3,11 @@
   padding: 0;
 }
 body {
-  color:map-get($color, black);
-  font-family: Arial,Helvetica,sans-serif;
-  font-family: 'Lato', sans-serif;
+  color:map-get($color, black-2);
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
-  font-weight: 400;
-  line-height: 20px;
+  line-height: 22px;
+  background: transparent;
 }
 h1, h2 , h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
