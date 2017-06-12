@@ -202,6 +202,13 @@ h1, h2, h3, h4, h5, h6 {
         color: #ffffff;
         text-decoration: none; }
 
+.footer-infor {
+  background: #27ae60; }
+  .footer-infor .desc-if {
+    float: left; }
+  .footer-infor .make-r {
+    float: right; }
+
 .selected {
   background: #f2f3f3;
   padding: 40px 0; }
@@ -233,8 +240,9 @@ h1, h2, h3, h4, h5, h6 {
   .gallary .gallary-item {
     float: left;
     width: 262px;
-    margin-right: 30px; }
-    .gallary .gallary-item:nth-child(4) {
+    margin-right: 30px;
+    padding-bottom: 30px; }
+    .gallary .gallary-item:nth-child(4n) {
       margin-right: 0; }
     .gallary .gallary-item .gallary-img {
       width: 100%; }
@@ -295,7 +303,8 @@ h1, h2, h3, h4, h5, h6 {
     .recent-pro .gallery .gallery-item {
       float: left;
       width: 360px;
-      margin-right: 30px; }
+      margin-right: 30px;
+      padding-bottom: 30px; }
       .recent-pro .gallery .gallery-item:nth-child(3n) {
         margin-right: 0; }
       .recent-pro .gallery .gallery-item .gallery-img {
