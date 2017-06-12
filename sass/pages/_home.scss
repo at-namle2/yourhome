@@ -46,6 +46,7 @@
       width: 100%;
     }
   }
+}
   .hover-img {
     position: relative;
     .room-overlay {
@@ -54,12 +55,23 @@
       top: 0;
       overflow: hidden;
       width: 100%;
-      height: 83%;
+      &.room-overlay1 {
+        height: 83%;
+      }
+      &.room-overlay2 {
+        height: 98%;
+      }
+      &.room-overlay3 {
+        height: 87%;
+      }
       .roomdetails-overlay {
         position: absolute;
         text-align: center;
         bottom: 0;
         width: 100%;
+        .room-price {
+          color: map-get($color, white);
+        }
         .title-details {
           color: map-get($color, white);
           margin: 15px 0;
@@ -68,7 +80,7 @@
           color: map-get($color, white);
           position: absolute;
           text-align: center;
-          transform: translate(-50%);
+          transform: translateX(-50%);
           text-decoration: none;
         }
         .btn {
@@ -77,6 +89,9 @@
           color: map-get($color, white);
           display: inline-block;
           padding: 10px 25px;
+          &:hover {
+            background: map-get($color, black);
+          }
         }
       }
     }
@@ -87,7 +102,7 @@
       }
     }
   }
-}
+
 .recent-pro {
    background: map-get($color, gray-3);
    padding: 50px 0 50px;

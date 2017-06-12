@@ -327,41 +327,51 @@ h1, h2, h3, h4, h5, h6 {
       margin-right: 0; }
     .gallary .gallary-item .gallary-img {
       width: 100%; }
-  .gallary .hover-img {
-    position: relative; }
-    .gallary .hover-img .room-overlay {
-      background: rgba(0, 0, 0, 0.4);
-      position: absolute;
-      top: 0;
-      overflow: hidden;
-      width: 100%;
+
+.hover-img {
+  position: relative; }
+  .hover-img .room-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%; }
+    .hover-img .room-overlay.room-overlay1 {
       height: 83%; }
-      .gallary .hover-img .room-overlay .roomdetails-overlay {
+    .hover-img .room-overlay.room-overlay2 {
+      height: 98%; }
+    .hover-img .room-overlay.room-overlay3 {
+      height: 87%; }
+    .hover-img .room-overlay .roomdetails-overlay {
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      width: 100%; }
+      .hover-img .room-overlay .roomdetails-overlay .room-price {
+        color: #ffffff; }
+      .hover-img .room-overlay .roomdetails-overlay .title-details {
+        color: #ffffff;
+        margin: 15px 0; }
+      .hover-img .room-overlay .roomdetails-overlay .read-more {
+        color: #ffffff;
         position: absolute;
         text-align: center;
-        bottom: 0;
-        width: 100%; }
-        .gallary .hover-img .room-overlay .roomdetails-overlay .title-details {
-          color: #ffffff;
-          margin: 15px 0; }
-        .gallary .hover-img .room-overlay .roomdetails-overlay .read-more {
-          color: #ffffff;
-          position: absolute;
-          text-align: center;
-          transform: translate(-50%);
-          text-decoration: none; }
-        .gallary .hover-img .room-overlay .roomdetails-overlay .btn {
-          -webkit-border-radius: 25px;
-          -moz-border-radius: 25px;
-          -o-border-radius: 25px;
-          border-radius: 25px;
-          background: #27ae60;
-          color: #ffffff;
-          display: inline-block;
-          padding: 10px 25px; }
-    .gallary .hover-img:hover .roomdetails-overlay {
-      top: 60px;
-      position: absolute; }
+        transform: translateX(-50%);
+        text-decoration: none; }
+      .hover-img .room-overlay .roomdetails-overlay .btn {
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -o-border-radius: 25px;
+        border-radius: 25px;
+        background: #27ae60;
+        color: #ffffff;
+        display: inline-block;
+        padding: 10px 25px; }
+        .hover-img .room-overlay .roomdetails-overlay .btn:hover {
+          background: #000000; }
+  .hover-img:hover .roomdetails-overlay {
+    top: 60px;
+    position: absolute; }
 
 .recent-pro {
   background: #f2f3f3;
