@@ -450,6 +450,14 @@ h1, h2, h3, h4, h5, h6 {
           color: #ffffff; }
       .recent-pro .gallery .gallery-item .desc-ad {
         padding-bottom: 30px; }
+      .recent-pro .gallery .gallery-item .caption {
+        background: #ffffff; }
+        .recent-pro .gallery .gallery-item .caption .date {
+          padding: 10px 0 15px; }
+        .recent-pro .gallery .gallery-item .caption .title-heading {
+          color: #27ae60; }
+        .recent-pro .gallery .gallery-item .caption .title-post {
+          padding: 10px 0 15px; }
   .recent-pro .view-room {
     display: block;
     padding-top: 30px; }

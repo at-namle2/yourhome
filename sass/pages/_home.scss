@@ -197,6 +197,18 @@
       .desc-ad {
         padding-bottom: 30px;
       }
+      .caption {
+        background: map-get($color, white);
+        .date {
+          padding: 10px 0 15px;
+        }
+        .title-heading  {
+          color: map-get($color, green);
+        }
+        .title-post {
+          padding: 10px 0 15px;
+        }
+      }
      }
    }
    .view-room {
