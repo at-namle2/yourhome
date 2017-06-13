@@ -126,6 +126,37 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
   border: none; }
 
+.hover-img .room-overlay .roomdetails-overlay .btn, .recent-pro .gallery .gallery-item .caption .btn, .recent-pro .view-room .btn {
+  background: #27ae60;
+  color: #ffffff;
+  border-color: #27ae60;
+  display: inline-block;
+  padding: 10px 25px; }
+  .hover-img .room-overlay .roomdetails-overlay .btn:hover, .recent-pro .gallery .gallery-item .caption .btn:hover, .recent-pro .view-room .btn:hover {
+    background: #000000; }
+
+.recent-pro .recent .share-borde:before, .recent-pro .recent .share-borde:after {
+  position: absolute;
+  content: '';
+  background: #27ae60;
+  width: 62px;
+  left: -12px;
+  height: 1px; }
+
+.slides .nav-owl .owl-prev, .slides .nav-owl .owl-next {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #27ae60;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #ffffff;
+  top: -370px; }
+  .slides .nav-owl .owl-prev:hover, .slides .nav-owl .owl-next:hover {
+    color: #27ae60;
+    background: #f2f3f3; }
+
 .container {
   width: 1140px;
   margin: 0 auto; }
@@ -196,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 580px; }
   .slides .hours {
     display: block;
-    padding: 280px 0;
+    padding: 246px 0;
     line-height: 44px;
     color: #ffffff; }
     .slides .hours .desc-slide {
@@ -211,6 +242,20 @@ h1, h2, h3, h4, h5, h6 {
       .slides .hours .read-more .read-a {
         color: #ffffff;
         text-decoration: none; }
+  .slides .nav-owl {
+    position: relative; }
+    .slides .nav-owl .owl-prev {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      left: 12px; }
+    .slides .nav-owl .owl-next {
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      right: 12px; }
 
 .footer-infor {
   background: #27ae60;
@@ -301,6 +346,8 @@ h1, h2, h3, h4, h5, h6 {
       margin-right: 30px; }
       .selected .formtry .formtry-item:nth-child(6) {
         margin-right: 0; }
+      .selected .formtry .formtry-item .title-formtry {
+        padding-bottom: 13px; }
       .selected .formtry .formtry-item .city-select {
         background: #ffffff;
         width: 100%;
@@ -327,6 +374,50 @@ h1, h2, h3, h4, h5, h6 {
       margin-right: 0; }
     .gallary .gallary-item .gallary-img {
       width: 100%; }
+  .gallary .thub {
+    position: relative;
+    overflow: hidden; }
+    .gallary .thub:before {
+      -webkit-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      transition: all 0.5s linear;
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: #27ae60;
+      z-index: 9;
+      top: -100px;
+      visibility: hidden; }
+    .gallary .thub .socials-icons {
+      -webkit-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      transition: all 0.5s linear;
+      position: absolute;
+      width: 100%;
+      height: 0;
+      bottom: 0;
+      top: -80px;
+      left: 0;
+      background: #27ae60; }
+      .gallary .thub .socials-icons .icons {
+        padding-left: 10px;
+        background: #27ae60; }
+        .gallary .thub .socials-icons .icons .icon-item {
+          display: inline-block;
+          padding: 0 10px;
+          margin: 12px 6px 10px; }
+          .gallary .thub .socials-icons .icons .icon-item .fac {
+            color: #ffffff; }
+            .gallary .thub .socials-icons .icons .icon-item .fac:hover {
+              color: #000000; }
+    .gallary .thub:hover .socials-icons {
+      position: absolute;
+      top: 100px;
+      visibility: visible;
+      background: #27ae60; }
 
 .hover-img {
   position: relative; }
@@ -356,19 +447,17 @@ h1, h2, h3, h4, h5, h6 {
         color: #ffffff;
         position: absolute;
         text-align: center;
-        transform: translateX(-50%);
+        transform: translate(-50%);
         text-decoration: none; }
       .hover-img .room-overlay .roomdetails-overlay .btn {
         -webkit-border-radius: 25px;
         -moz-border-radius: 25px;
         -o-border-radius: 25px;
         border-radius: 25px;
-        background: #27ae60;
-        color: #ffffff;
-        display: inline-block;
-        padding: 10px 25px; }
-        .hover-img .room-overlay .roomdetails-overlay .btn:hover {
-          background: #000000; }
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear; }
   .hover-img:hover .roomdetails-overlay {
     top: 60px;
     position: absolute; }
@@ -395,22 +484,9 @@ h1, h2, h3, h4, h5, h6 {
       left: 0;
       height: 1px; }
       .recent-pro .recent .share-borde:before {
-        position: absolute;
-        content: '';
-        background: #27ae60;
-        margin: 5px auto;
-        width: 62px;
-        left: -12px;
-        height: 1px; }
+        margin: 5px auto; }
       .recent-pro .recent .share-borde:after {
-        position: absolute;
-        content: '';
-        background: #27ae60;
-        margin: 26px auto;
-        width: 62px;
-        left: -12px;
-        height: 1px;
-        top: -31px; }
+        top: -6px; }
     .recent-pro .recent .title-we {
       padding-bottom: 30px; }
   .recent-pro .room {
@@ -448,9 +524,12 @@ h1, h2, h3, h4, h5, h6 {
           line-height: 58px;
           background: #27ae60;
           color: #ffffff; }
+          .recent-pro .gallery .gallery-item .icon .fah:hover {
+            background: #000000; }
       .recent-pro .gallery .gallery-item .desc-ad {
         padding-bottom: 30px; }
       .recent-pro .gallery .gallery-item .caption {
+        padding: 10px;
         background: #ffffff; }
         .recent-pro .gallery .gallery-item .caption .date {
           padding: 10px 0 15px; }
@@ -458,18 +537,28 @@ h1, h2, h3, h4, h5, h6 {
           color: #27ae60; }
         .recent-pro .gallery .gallery-item .caption .title-post {
           padding: 10px 0 15px; }
+        .recent-pro .gallery .gallery-item .caption .btn {
+          -webkit-border-radius: 25px;
+          -moz-border-radius: 25px;
+          -o-border-radius: 25px;
+          border-radius: 25px; }
+          .recent-pro .gallery .gallery-item .caption .btn.btn-r {
+            margin: 10px 0 20px; }
+          .recent-pro .gallery .gallery-item .caption .btn:hover {
+            background: #000000; }
+          .recent-pro .gallery .gallery-item .caption .btn .read-a {
+            text-decoration: none;
+            color: #ffffff; }
   .recent-pro .view-room {
     display: block;
     padding-top: 30px; }
-    .recent-pro .view-room .view-a {
+    .recent-pro .view-room .btn {
       -webkit-border-radius: 25px;
       -moz-border-radius: 25px;
       -o-border-radius: 25px;
-      border-radius: 25px;
-      padding: 10px 25px;
-      background: #27ae60;
-      color: #ffffff;
-      text-decoration: none; }
+      border-radius: 25px; }
+      .recent-pro .view-room .btn.view-a {
+        text-decoration: none; }
 
 .slides-here {
   height: 350px; }

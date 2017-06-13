@@ -11,6 +11,9 @@
       &:nth-child(6) {
         margin-right: 0;
       }
+      .title-formtry {
+        padding-bottom: 13px;
+      }
       .city-select {
         background: map-get($color, white);
         width: 100%;
@@ -46,63 +49,105 @@
       width: 100%;
     }
   }
-}
-  .hover-img {
+  .thub {
     position: relative;
-    .room-overlay {
-      background: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    &:before {
+      @include transition(all 0.5s linear);
       position: absolute;
-      top: 0;
-      overflow: hidden;
+      content: "";
       width: 100%;
-      &.room-overlay1 {
-        height: 83%;
-      }
-      &.room-overlay2 {
-        height: 98%;
-      }
-      &.room-overlay3 {
-        height: 87%;
-      }
-      .roomdetails-overlay {
-        position: absolute;
-        text-align: center;
-        bottom: 0;
-        width: 100%;
-        .room-price {
-          color: map-get($color, white);
-        }
-        .title-details {
-          color: map-get($color, white);
-          margin: 15px 0;
-        }
-        .read-more {
-          color: map-get($color, white);
-          position: absolute;
-          text-align: center;
-          transform: translateX(-50%);
-          text-decoration: none;
-        }
-        .btn {
-          @include border-radius(25px);
-          background: map-get($color, green);
-          color: map-get($color, white);
+      height: 100%;
+      background: map-get($color, green);
+      z-index: 9;
+      top: -100px;
+      visibility: hidden;
+    }
+    .socials-icons {
+      @include transition(all 0.5s linear);
+      position: absolute;
+      width: 100%;
+      height: 0;
+      bottom: 0;
+      top: -80px;
+      left: 0;
+      background: map-get($color, green);
+      .icons {
+        padding-left: 10px;
+        background: map-get($color, green);
+        .icon-item {
           display: inline-block;
-          padding: 10px 25px;
-          &:hover {
-            background: map-get($color, black);
+          padding: 0 10px;
+          margin: 12px 6px 10px;
+          .fac {
+            color: map-get($color, white);
+            &:hover {
+             color: map-get($color, black);
+            }
           }
         }
       }
     }
     &:hover {
-      .roomdetails-overlay {
-        top: 60px;
+      .socials-icons {
         position: absolute;
+        top: 100px;
+        visibility: visible;
+        background: map-get($color, green);
       }
     }
   }
-
+}
+.hover-img {
+  position: relative;
+  .room-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    &.room-overlay1 {
+      height: 83%;
+    }
+    &.room-overlay2 {
+      height: 98%;
+    }
+    &.room-overlay3 {
+      height: 87%;
+    }
+    .roomdetails-overlay {
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+      .room-price {
+        color: map-get($color, white);
+      }
+      .title-details {
+        color: map-get($color, white);
+        margin: 15px 0;
+      }
+      .read-more {
+        color: map-get($color, white);
+        position: absolute;
+        text-align: center;
+        transform: translate(-50%);
+        text-decoration: none;
+      }
+      .btn {
+        @extend %btn;
+        @include border-radius(25px);
+        @include transition(all 0.5s linear);
+      }
+    }
+  }
+  &:hover {
+    .roomdetails-overlay {
+      top: 60px;
+      position: absolute;
+    }
+  }
+}
 .recent-pro {
    background: map-get($color, gray-3);
    padding: 50px 0 50px;
@@ -129,23 +174,12 @@
         left: 0;
         height: 1px;
         &:before {
-          position: absolute;
-          content: '';
-          background: map-get($color, green);
+          @extend %share-border;
           margin: 5px auto;
-          width: 62px;
-          left: -12px;
-          height: 1px;
         }
         &:after {
-          position: absolute;
-          content: '';
-          background: map-get($color, green);
-          margin: 26px auto;
-          width: 62px;
-          left: -12px;
-          height: 1px;
-          top: -31px;
+          @extend %share-border;
+          top: -6px;
         }
      }
      .title-we {
@@ -192,12 +226,16 @@
           line-height: 58px;
           background: map-get($color, green);
           color: map-get($color, white);
+          &:hover {
+            background: map-get($color, black);
+          }
         }
       }
       .desc-ad {
         padding-bottom: 30px;
       }
       .caption {
+        padding: 10px;
         background: map-get($color, white);
         .date {
           padding: 10px 0 15px;
@@ -208,21 +246,35 @@
         .title-post {
           padding: 10px 0 15px;
         }
-      }
+        .btn {
+          @extend %btn;
+          @include border-radius(25px);
+          &.btn-r {
+            margin: 10px 0 20px;
+          }
+          &:hover {
+            background: map-get($color, black);
+          }
+          .read-a {
+            text-decoration: none;
+            color: map-get($color, white);
+          }
+        }
+       }
      }
    }
    .view-room {
       display: block;
       padding-top: 30px;
-      .view-a {
+      .btn {
+        @extend %btn;
         @include border-radius(25px);
-        padding: 10px 25px;
-        background: map-get($color, green);
-        color: map-get($color, white);
-        text-decoration: none;
+        &.view-a {
+          text-decoration: none;
+        }
       }
     }
-}
+  }
 .slides-here {
   height: 350px;
   &.slides-he1 {
@@ -232,7 +284,6 @@
   &.slides-he2 {
     background: url(../images/slide/slide1.jpg) no-repeat;
     background-size: cover;
-
   }
   .answer {
     display: block;

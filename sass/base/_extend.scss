@@ -15,3 +15,36 @@
   outline: none;
   border: none;
 }
+%btn {
+  background: map-get($color, green);
+  color: map-get($color, white);
+  border-color: map-get($color, green);
+  display: inline-block;
+  padding: 10px 25px;
+  &:hover {
+    background: map-get($color, black);
+  }
+}
+%share-border {
+  position: absolute;
+  content: '';
+  background: map-get($color, green);
+  width: 62px;
+  left: -12px;
+  height: 1px;
+}
+%prev {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: map-get($color, green);
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: map-get($color, white);
+  top: -370px;
+  &:hover {
+    color: map-get($color, green);
+    background: map-get($color, gray-3);
+  }
+}

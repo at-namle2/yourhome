@@ -89,7 +89,7 @@
   height: 580px;
   .hours {
     display: block;
-    padding: 280px 0;
+    padding: 246px 0;
     line-height: 44px;
     color: map-get($color, white);
     .desc-slide {
@@ -107,6 +107,19 @@
         color: map-get($color, white);
         text-decoration: none;
       }
+    }
+  }
+  .nav-owl {
+    position: relative;
+    .owl-prev {
+      @extend %prev;
+      @include border-radius(50%);
+      left: 12px;
+    }
+    .owl-next {
+      @extend %prev;
+      @include border-radius(50%);
+      right: 12px;
     }
   }
 }
