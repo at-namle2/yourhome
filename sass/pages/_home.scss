@@ -52,17 +52,6 @@
   .thub {
     position: relative;
     overflow: hidden;
-    &:before {
-      @include transition(all 0.5s linear);
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: map-get($color, green);
-      z-index: 9;
-      top: -100px;
-      visibility: hidden;
-    }
     .socials-icons {
       @include transition(all 0.5s linear);
       position: absolute;
@@ -199,8 +188,8 @@
       }
       .room-img {
         width: 100%;
-      }
-    }
+       }
+     }
    }
    .gallery {
     @extend %clearfix;
@@ -219,7 +208,11 @@
       .icon {
         display: block;
         margin-bottom: 20px;
+        .title-quality {
+          padding-bottom: 10px;
+        }
         .fah {
+          @include transition(all 0.5s linear);
           @include border-radius(50%);
           width: 60px;
           height: 60px;
@@ -232,7 +225,7 @@
         }
       }
       .desc-ad {
-        padding-bottom: 30px;
+        padding: 10px 0 10px;
       }
       .caption {
         padding: 10px;
@@ -262,6 +255,16 @@
         }
        }
      }
+     .item-hover {
+        position: relative;
+        overflow: hidden;
+         &:hover {
+          .zoom-img {
+            @include transition(all 0.7s ease-in-out);
+            transform: scale(1.1);
+          }
+        }
+      }
    }
    .view-room {
       display: block;
@@ -280,6 +283,7 @@
   &.slides-he1 {
     background: url(../images/slide/slide2.jpg) no-repeat;
     background-size: cover;
+    opacity: 0.4;
   }
   &.slides-he2 {
     background: url(../images/slide/slide1.jpg) no-repeat;
@@ -314,7 +318,7 @@
     .desc-author {
       display: inline-block;
       vertical-align: top;
-      padding-top: 46px;
+      padding-top: 30px;
       color: map-get($color, white);
       .title-athor {
         padding: 10px 0 10px;

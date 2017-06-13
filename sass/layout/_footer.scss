@@ -50,9 +50,13 @@
         padding: 0 10px;
       }
       .fa-a {
+        @include transition(all 0.5s linear);
         text-decoration: none;
         text-transform: capitalize;
         color: map-get($color, gray-4);
+        &:hover {
+          color: map-get($color, white);
+        }
       }
     }
   }
@@ -86,7 +90,23 @@
 }
 .copyright {
   padding: 20px 0;
-  color: map-get($color, white);
+  color: map-get($color, gray-4);
   background: map-get($color, black);
 }
-
+.top-down {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  display: inline;
+  .fa-up {
+    @include transition(all 0.2s linear);
+    @include border-radius(50%);
+    width: 50px;
+    height: 50px;
+    background: map-get($color, green);
+    color: map-get($color, white);
+    line-height: 42px;
+    opacity: 0.5;
+  }
+}
