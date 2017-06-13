@@ -1,24 +1,23 @@
 .footer-infor {
   background: map-get($color, green);
   height: 108px;
-  .real-related {
-    padding: 46px 0 46px;
-    .desc-if {
-      float: left;
-      color: map-get($color, white);
+  .desc-if {
+    float: left;
+    color: map-get($color, white);
+    padding-top: 46px;
+  }
+  .make-r {
+    float: right;
+    color: map-get($color, white);
+    padding: 10px 20px;
+    border: 2px solid map-get($color, white);
+    margin-top: 36px;
+    &:hover {
+      background: map-get($color, gray-2);
     }
-    .make-r {
-      float: right;
+    .make-a {
       color: map-get($color, white);
-      padding: 10px 20px;
-      border: 2px solid map-get($color, white);
-      &:hover {
-        background: map-get($color, gray-2);
-      }
-      .make-a {
-        color: map-get($color, white);
-        text-decoration: none;
-      }
+      text-decoration: none;
     }
   }
 }

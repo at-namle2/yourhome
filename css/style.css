@@ -260,21 +260,21 @@ h1, h2, h3, h4, h5, h6 {
 .footer-infor {
   background: #27ae60;
   height: 108px; }
-  .footer-infor .real-related {
-    padding: 46px 0 46px; }
-    .footer-infor .real-related .desc-if {
-      float: left;
-      color: #ffffff; }
-    .footer-infor .real-related .make-r {
-      float: right;
+  .footer-infor .desc-if {
+    float: left;
+    color: #ffffff;
+    padding-top: 46px; }
+  .footer-infor .make-r {
+    float: right;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    margin-top: 36px; }
+    .footer-infor .make-r:hover {
+      background: #333333; }
+    .footer-infor .make-r .make-a {
       color: #ffffff;
-      padding: 10px 20px;
-      border: 2px solid #ffffff; }
-      .footer-infor .real-related .make-r:hover {
-        background: #333333; }
-      .footer-infor .real-related .make-r .make-a {
-        color: #ffffff;
-        text-decoration: none; }
+      text-decoration: none; }
 
 .footer-about {
   background: #333333; }
