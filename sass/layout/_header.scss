@@ -8,6 +8,9 @@
       float: left;
       .infor-email {
         display: inline-block;
+        .infor-a {
+          color: map-get($color, black);
+        }
         .fe {
           padding-right: 10px;
         }
@@ -59,7 +62,6 @@
       @extend %mr-pd;
       .main-menu-item {
         display: inline-block;
-        margin-right: 10px;
         .menu-a {
           color: map-get($color, black);
           text-decoration: none;
