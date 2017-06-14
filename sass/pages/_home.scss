@@ -144,10 +144,45 @@
       background: map-get($color, white);
       .left {
         float: left;
+        width: 70%;
+        .galeft {
+          @extend %clearfix;
+          width: 100%;
+          .galeft-item {
+            float: left;
+            width: calc((100% - 30px) / 2);
+            margin-right: 30px;
+             &:nth-child(1) {
+               margin-right: 0;
+            }
+          }
+          .icon {
+            display: block;
+            margin-bottom: 20px;
+            .title-quality {
+              padding-bottom: 10px;
+            }
+            .fah {
+              @include transition(all 0.5s linear);
+              @include border-radius(50%);
+              width: 60px;
+              height: 60px;
+              line-height: 58px;
+              background: map-get($color, green);
+              color: map-get($color, white);
+              &:hover {
+                background: map-get($color, black);
+              }
+            }
+          }
+          .desc-ad {
+            padding: 10px 0 10px;
+          }
+        }
       }
       .right {
         float: right;
-        width: 320px;
+        width: 30%;
         .right-img {
           width: 100%;
         }
@@ -181,7 +216,7 @@
     margin-bottom: 30px;
     .room-item {
       float: left;
-      width: 555px;
+      width: calc((100% - 30px) / 2);
       margin-right: 30px;
       &:nth-child(2) {
         margin-right: 0;
@@ -196,7 +231,7 @@
     width: 100%;
     .gallery-item {
       float: left;
-      width: 360px;
+      width: calc((100% - 60px) / 3);
       margin-right: 30px;
       padding-bottom: 30px;
       &:nth-child(3n) {
@@ -204,28 +239,6 @@
       }
       .gallery-img {
         width: 100%;
-      }
-      .icon {
-        display: block;
-        margin-bottom: 20px;
-        .title-quality {
-          padding-bottom: 10px;
-        }
-        .fah {
-          @include transition(all 0.5s linear);
-          @include border-radius(50%);
-          width: 60px;
-          height: 60px;
-          line-height: 58px;
-          background: map-get($color, green);
-          color: map-get($color, white);
-          &:hover {
-            background: map-get($color, black);
-          }
-        }
-      }
-      .desc-ad {
-        padding: 10px 0 10px;
       }
       .caption {
         padding: 10px;
