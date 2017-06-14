@@ -1,0 +1,181 @@
+.top-head {
+  background: map-get($color, gray);
+  height: 40px;
+  .infor-domain {
+    @extend %clearfix;
+    padding-top: 8px;
+    .contact {
+      float: left;
+      .infor-email {
+        display: inline-block;
+        .infor-a {
+          color: map-get($color, black);
+        }
+        .fe {
+          padding-right: 10px;
+        }
+        &.email {
+          padding-left: 10px;
+        }
+      }
+    }
+    .social-page {
+      float: right;
+      .socials {
+        @extend %mr-pd;
+        .social-item {
+          display: inline-block;
+          padding-right: 10px;
+          .social-a {
+            display: block;
+            width: 25px;
+            height: 25px;
+            &:hover {
+              @include border-radius(50%);
+              background: map-get($color, green);
+            }
+            .fas {
+              color: map-get($color, gray-2);
+              &:hover {
+                color: map-get($color, white);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.yourhome {
+  @extend %clearfix;
+  .logo {
+    float: left;
+    .img-logo {
+      width: 288px;
+      height: 66px;
+    }
+  }
+  .nav-bar {
+    float: right;
+    padding: 30px 0;
+    .main-menu {
+      @extend %mr-pd;
+      .main-menu-item {
+        display: inline-block;
+        .menu-a {
+          color: map-get($color, black);
+          text-decoration: none;
+          padding: 10px 20px;
+          &:hover {
+            @include border-radius(30px);
+            background: map-get($color, green);
+            color: map-get($color, white);
+          }
+          .fadown {
+            padding-left: 5px;
+          }
+        }
+        .active {
+          @include border-radius(30px);
+          color: map-get($color, white);
+          text-decoration: none;
+          background: map-get($color, green);
+        }
+      }
+     .hover-menu {
+        position: relative;
+        width: 96px;
+        &.menu-vip {
+          width: 116px;
+        }
+        .sub-menu {
+          @extend %mr-pd;
+          position: absolute;
+          top: 25px;
+          display: none;
+          margin-top: 10px;
+          .sub-menu-item {
+            min-width: 170px;
+            height: auto;
+            line-height: 30px;
+            color: map-get($color, white);
+            background: map-get($color, black-2);
+            border-bottom: 1px solid map-get($color, gray-3);
+            .page-a {
+              text-decoration: none;
+              padding: 14px 10px 4px;
+              color: map-get($color, white);
+            }
+            .sub-menu-2 {
+              position: absolute;
+              left: 100%;
+              top: 0;
+              display: none;
+              min-width: 170px;
+              .sub-menu-2-item {
+                background: map-get($color, green);
+                border-left: 1px solid map-get($color, gray-3);
+                border-bottom: 1px solid map-get($color, gray-3);
+                .page-a-1 {
+                  color: map-get($color, white);
+                  text-decoration: none;
+                  padding: 14px 10px 4px;
+                }
+              }
+            }
+          }
+        }
+        &:hover {
+           .sub-menu {
+             display: block;
+             &:hover {
+              .sub-menu-2 {
+                display: block;
+              }
+             }
+           }
+        }
+      }
+    }
+  }
+}
+.slides {
+  background: url(../images/slide/slide1.jpg) no-repeat;
+  background-size: cover;
+  height: 580px;
+  .hours {
+    display: block;
+    padding: 246px 0;
+    line-height: 44px;
+    color: map-get($color, white);
+    .desc-slide {
+      padding: 14px 0 20px;
+    }
+    .read-more {
+      display: inline-block;
+      padding: 3px 28px;
+      background: map-get($color, green);
+      border: 2px solid map-get($color, green);
+      &:hover {
+        background: transparent;
+      }
+      .read-a {
+        color: map-get($color, white);
+        text-decoration: none;
+      }
+    }
+  }
+  .nav-owl {
+    position: relative;
+    .owl-prev {
+      @extend %prev;
+      @include border-radius(50%);
+      left: 12px;
+    }
+    .owl-next {
+      @extend %prev;
+      @include border-radius(50%);
+      right: 12px;
+    }
+  }
+}

@@ -1,0 +1,359 @@
+.selected {
+  background: map-get($color, gray-3);
+  padding: 40px 0;
+  .formtry {
+    @extend %clearfix;
+    width: 100%;
+    .formtry-item {
+      float: left;
+      width: calc((100% - 150px) / 6);
+      margin-right: 30px;
+      &:nth-child(6) {
+        margin-right: 0;
+      }
+      .title-formtry {
+        padding-bottom: 13px;
+      }
+      .city-select {
+        background: map-get($color, white);
+        width: 100%;
+        height: 44px;
+        border: 1px solid map-get($color, white);
+        border-radius: 2px;
+        cursor: pointer;
+        outline: none;
+      }
+      .input {
+        @extend %ol-bd;
+        color: map-get($color, white);
+        background: map-get($color, green);
+        width: 100%;
+        height: 44px;
+      }
+    }
+  }
+}
+.gallary {
+  @extend %clearfix;
+  width: 100%;
+  &.header-gallary {
+    padding: 30px 0 30px;
+  }
+  &.footer-gallary {
+    padding: 30px 0 30px;
+  }
+  .gallary-item {
+    float: left;
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+    .gallary-img {
+      width: 100%;
+    }
+  }
+  .thub {
+    position: relative;
+    overflow: hidden;
+    .socials-icons {
+      @include transition(all 0.5s linear);
+      position: absolute;
+      width: 100%;
+      height: 0;
+      bottom: 0;
+      top: -80px;
+      left: 0;
+      background: map-get($color, green);
+      .icons {
+        padding-left: 10px;
+        background: map-get($color, green);
+        .icon-item {
+          display: inline-block;
+          padding: 0 10px;
+          margin: 12px 6px 10px;
+          .fac {
+            color: map-get($color, white);
+            &:hover {
+             color: map-get($color, black);
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      .socials-icons {
+        position: absolute;
+        top: 100px;
+        visibility: visible;
+        background: map-get($color, green);
+      }
+    }
+    .infor-text {
+      padding: 15px 0 30px;
+      .fe-h3 {
+        padding-bottom: 6px;
+      }
+      .fas-a {
+        color: map-get($color, black);
+      }
+      .fax {
+        &:before {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
+.hover-img {
+  position: relative;
+  .room-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    &.room-overlay1 {
+      height: 98%;
+    }
+    &.room-overlay2 {
+      height: 98%;
+    }
+    &.room-overlay3 {
+      height: 87%;
+    }
+    .roomdetails-overlay {
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+      .room-price {
+        color: map-get($color, white);
+      }
+      .title-details {
+        color: map-get($color, white);
+        margin: 15px 0;
+      }
+      .read-more {
+        color: map-get($color, white);
+        position: absolute;
+        text-align: center;
+        transform: translate(-50%);
+        text-decoration: none;
+      }
+      .btn {
+        @extend %btn;
+        @include border-radius(25px);
+        @include transition(all 0.5s linear);
+      }
+    }
+  }
+  &:hover {
+    .roomdetails-overlay {
+      top: 60px;
+      position: absolute;
+    }
+  }
+}
+.recent-pro {
+   background: map-get($color, gray-3);
+   padding: 50px 0 50px;
+   &.recent1 {
+      background: map-get($color, white);
+      .left {
+        float: left;
+        width: 70%;
+        .galeft {
+          @extend %clearfix;
+          width: 100%;
+          .galeft-item {
+            float: left;
+            width: calc((100% - 30px) / 2);
+            margin-right: 30px;
+             &:nth-child(1) {
+               margin-right: 0;
+            }
+          }
+          .icon {
+            display: block;
+            margin-bottom: 20px;
+            .title-quality {
+              padding-bottom: 10px;
+            }
+            .fah {
+              @include transition(all 0.5s linear);
+              @include border-radius(50%);
+              width: 60px;
+              height: 60px;
+              line-height: 58px;
+              background: map-get($color, green);
+              color: map-get($color, white);
+              &:hover {
+                background: map-get($color, black);
+              }
+            }
+          }
+          .desc-ad {
+            padding: 10px 0 10px;
+          }
+        }
+      }
+      .right {
+        float: right;
+        width: 30%;
+        .right-img {
+          width: 100%;
+        }
+      }
+   }
+   .recent {
+     display: block;
+     .share-borde {
+        position: relative;
+        background: map-get($color, green);
+        margin: 20px auto;
+        width: 40px;
+        left: 0;
+        height: 1px;
+        &:before {
+          @extend %share-border;
+          margin: 5px auto;
+        }
+        &:after {
+          @extend %share-border;
+          top: -6px;
+        }
+     }
+     .title-we {
+      padding-bottom: 30px;
+     }
+   }
+   .room {
+    @extend %clearfix;
+    width: 100%;
+    margin-bottom: 30px;
+    .room-item {
+      float: left;
+      width: calc((100% - 30px) / 2);
+      margin-right: 30px;
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+      .room-img {
+        width: 100%;
+       }
+     }
+   }
+   .gallery {
+    @extend %clearfix;
+    width: 100%;
+    .gallery-item {
+      float: left;
+      width: calc((100% - 60px) / 3);
+      margin-right: 30px;
+      padding-bottom: 30px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      .gallery-img {
+        width: 100%;
+      }
+      .caption {
+        padding: 10px;
+        background: map-get($color, white);
+        .date {
+          padding: 10px 0 15px;
+        }
+        .title-heading  {
+          color: map-get($color, green);
+        }
+        .title-post {
+          padding: 10px 0 15px;
+        }
+        .btn {
+          @extend %btn;
+          @include border-radius(25px);
+          &.btn-r {
+            margin: 10px 0 20px;
+          }
+          &:hover {
+            background: map-get($color, black);
+          }
+          .read-a {
+            text-decoration: none;
+            color: map-get($color, white);
+          }
+        }
+       }
+     }
+     .item-hover {
+        position: relative;
+        overflow: hidden;
+         &:hover {
+          .zoom-img {
+            @include transition(all 0.7s ease-in-out);
+            transform: scale(1.1);
+          }
+        }
+      }
+   }
+   .view-room {
+      display: block;
+      padding-top: 30px;
+      .btn {
+        @extend %btn;
+        @include border-radius(25px);
+        &.view-a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+.slides-here {
+  height: 350px;
+  &.slides-he1 {
+    background: url(../images/slide/slide2.jpg) no-repeat;
+    background-size: cover;
+    opacity: 0.4;
+  }
+  &.slides-he2 {
+    background: url(../images/slide/slide1.jpg) no-repeat;
+    background-size: cover;
+  }
+  .answer {
+    display: block;
+    color: map-get($color, white);
+    &.answer1 {
+      padding-top: 126px;
+    }
+    &.answer2 {
+       padding-top: 80px;
+    }
+    .desc-sed {
+      width: 700px;
+      margin: 0 auto;
+      padding-bottom: 30px;
+    }
+    .title-we {
+      padding-bottom: 20px;
+    }
+  }
+  .auther {
+    .photo {
+      display: inline-block;
+      .photo-img {
+        @include border-radius(50%);
+        width: 100%;
+      }
+    }
+    .desc-author {
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 30px;
+      color: map-get($color, white);
+      .title-athor {
+        padding: 10px 0 10px;
+      }
+    }
+  }
+}
