@@ -54,6 +54,15 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif; }
 
+.font-releway {
+  font-family: 'Raleway', sans-serif; }
+
+.font-lato {
+  font-family: 'Lato', sans-serif; }
+
+.font-opensans {
+  font-family: 'Open Sans', sans-serif; }
+
 .clearfix {
   clear: both; }
 
@@ -62,9 +71,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .font-size-14 {
   font-size: 14px; }
-
-.font-size-15 {
-  font-size: 15px; }
 
 .font-size-16 {
   font-size: 16px; }
@@ -88,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 32px; }
 
 .font-size-34 {
-  font-size: 32px; }
+  font-size: 34px; }
 
 .font-size-40 {
   font-size: 40px; }
@@ -415,7 +421,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%; }
     .selected .formtry .formtry-item {
       float: left;
-      width: 160px;
+      width: calc((100% - 150px) / 6);
       margin-right: 30px; }
       .selected .formtry .formtry-item:nth-child(6) {
         margin-right: 0; }
@@ -436,13 +442,13 @@ h1, h2, h3, h4, h5, h6 {
         height: 44px; }
 
 .gallary {
-  width: 100%;
-  padding: 30px 0 30px; }
+  width: 100%; }
+  .gallary.footer-gallary {
+    padding: 30px; }
   .gallary .gallary-item {
     float: left;
     width: calc((100% - 90px) / 4);
-    margin-right: 30px;
-    padding-bottom: 30px; }
+    margin-right: 30px; }
     .gallary .gallary-item:nth-child(4n) {
       margin-right: 0; }
     .gallary .gallary-item .gallary-img {
@@ -478,6 +484,12 @@ h1, h2, h3, h4, h5, h6 {
       top: 100px;
       visibility: visible;
       background: #27ae60; }
+    .gallary .thub .infor-text {
+      padding: 15px 0 30px; }
+      .gallary .thub .infor-text .fe-h3 {
+        padding-bottom: 6px; }
+      .gallary .thub .infor-text .fax:before {
+        padding-right: 10px; }
 
 .hover-img {
   position: relative; }
