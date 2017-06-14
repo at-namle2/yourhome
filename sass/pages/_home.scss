@@ -94,6 +94,9 @@
       .fe-h3 {
         padding-bottom: 6px;
       }
+      .fas-a {
+        color: map-get($color, black);
+      }
       .fax {
         &:before {
           padding-right: 10px;

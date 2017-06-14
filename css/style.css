@@ -490,6 +490,8 @@ h1, h2, h3, h4, h5, h6 {
       padding: 15px 0 30px; }
       .gallary .thub .infor-text .fe-h3 {
         padding-bottom: 6px; }
+      .gallary .thub .infor-text .fas-a {
+        color: #000000; }
       .gallary .thub .infor-text .fax:before {
         padding-right: 10px; }
 
