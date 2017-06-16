@@ -234,6 +234,9 @@
           }
           .desc-ad {
             padding: 10px 0 10px;
+            &.ad {
+              padding-bottom: 30px;
+            }
           }
         }
       }
@@ -437,7 +440,6 @@
   &.slides-he1 {
     background: url(../images/slide/slide2.jpg) no-repeat;
     background-size: cover;
-    opacity: 0.4;
   }
   &.slides-he2 {
     background: url(../images/slide/slide1.jpg) no-repeat;
@@ -450,7 +452,34 @@
       padding-top: 126px;
     }
     &.answer2 {
-       padding-top: 80px;
+      padding-top: 80px;
+      margin-top: 0px;
+      text-align: center;
+      position: relative;
+      width: 70%;
+      margin: 0 auto;
+     .btn {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 25px;
+        top: 260px;
+        background: map-get($color, green);
+        color: map-get($color, white);
+       &:hover {
+          background: map-get($color, gray);
+          color: map-get($color, green);
+        }
+        &.btn-slide1 {
+          top: 140px;
+          left: 80px;
+        }
+        &.btn-slide2 {
+          right: 80px;
+          top: 140px;
+       }
+     }
     }
     .desc-sed {
       width: 700px;

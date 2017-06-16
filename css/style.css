@@ -343,8 +343,7 @@ h1, h2, h3, h4, h5, h6 {
 .slides-container {
   width: 100%;
   height: 580px;
-  position: relative;
-  margin: 30px 0 30px; }
+  position: relative; }
   .slides-container .img-slide {
     width: 100%;
     height: 100%;
@@ -357,7 +356,9 @@ h1, h2, h3, h4, h5, h6 {
     height: 50px;
     border: none;
     border-radius: 25px;
-    top: 260px; }
+    top: 260px;
+    background: #27ae60;
+    color: #ffffff; }
     .slides-container .btn.btn1 {
       left: 20px; }
     .slides-container .btn.btn2 {
@@ -368,8 +369,10 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     bottom: 200px;
     width: 100%; }
+    .slides-container .hours .title-solutions {
+      padding-bottom: 20px; }
     .slides-container .hours .desc-slide {
-      padding: 14px 0 20px; }
+      padding: 14px 0 30px; }
     .slides-container .hours .read-more {
       display: inline-block;
       padding: 10px 28px;
@@ -660,6 +663,8 @@ h1, h2, h3, h4, h5, h6 {
             background: #000000; }
       .why-choose-us.recent1 .galeft-right .left .galeft .desc-ad {
         padding: 10px 0 10px; }
+        .why-choose-us.recent1 .galeft-right .left .galeft .desc-ad.ad {
+          padding-bottom: 30px; }
   .why-choose-us.recent1 .galeft-right .right {
     float: right;
     width: 30%; }
@@ -798,8 +803,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 350px; }
   .slides-here.slides-he1 {
     background: url(../images/slide/slide2.jpg) no-repeat;
-    background-size: cover;
-    opacity: 0.4; }
+    background-size: cover; }
   .slides-here.slides-he2 {
     background: url(../images/slide/slide1.jpg) no-repeat;
     background-size: cover; }
@@ -809,7 +813,30 @@ h1, h2, h3, h4, h5, h6 {
     .slides-here .answer.answer1 {
       padding-top: 126px; }
     .slides-here .answer.answer2 {
-      padding-top: 80px; }
+      padding-top: 80px;
+      margin-top: 0px;
+      text-align: center;
+      position: relative;
+      width: 70%;
+      margin: 0 auto; }
+      .slides-here .answer.answer2 .btn {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 25px;
+        top: 260px;
+        background: #27ae60;
+        color: #ffffff; }
+        .slides-here .answer.answer2 .btn:hover {
+          background: #f2f2f2;
+          color: #27ae60; }
+        .slides-here .answer.answer2 .btn.btn-slide1 {
+          top: 140px;
+          left: 80px; }
+        .slides-here .answer.answer2 .btn.btn-slide2 {
+          right: 80px;
+          top: 140px; }
     .slides-here .answer .desc-sed {
       width: 700px;
       margin: 0 auto;
