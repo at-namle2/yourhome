@@ -22,7 +22,17 @@
   }
 }
 .footer-about {
-  background: map-get($color, gray-2);
+  padding: 30px 0 30px;
+  .gallary {
+    @extend %clearfix;
+    width: 100%;
+    .gallary-item {
+      @extend %gallary-item;
+      .gallary-img {
+        width: 100%;
+      }
+    }
+  }
   .ali {
     position: relative;
     margin-bottom: 10px;
@@ -90,7 +100,6 @@
 .copyright {
   padding: 20px 0;
   color: map-get($color, gray-4);
-  background: map-get($color, black);
 }
 .top-down {
   position: fixed;

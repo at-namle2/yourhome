@@ -48,3 +48,91 @@
     background: map-get($color, gray-3);
   }
 }
+%recent {
+  display: block;
+  .share-borde {
+    position: relative;
+    background: map-get($color, green);
+    margin: 20px auto;
+    width: 40px;
+    left: 0;
+    height: 1px;
+    &:before {
+      @extend %share-border;
+      margin: 5px auto;
+    }
+    &:after {
+      @extend %share-border;
+      top: -6px;
+    }
+ }
+ .title-we {
+   padding-bottom: 30px;
+  }
+}
+%gallery-item {
+  float: left;
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  padding-bottom: 30px;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+%gallary-item {
+  float: left;
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+  &:nth-child(4n) {
+  margin-right: 0;
+  }
+}
+%hover-img {
+ .room-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    &.room-overlay1 {
+      height: 98%;
+    }
+    &.room-overlay2 {
+      height: 98%;
+    }
+    &.room-overlay3 {
+      height: 87%;
+    }
+    .roomdetails-overlay {
+      position: absolute;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+      .room-price {
+        color: map-get($color, white);
+      }
+      .title-details {
+        color: map-get($color, white);
+        margin: 15px 0;
+      }
+      .read-more {
+        color: map-get($color, white);
+        position: absolute;
+        text-align: center;
+        transform: translate(-50%);
+        text-decoration: none;
+      }
+      .btn {
+        @extend %btn;
+        @include border-radius(25px);
+        @include transition(all 0.5s linear);
+      }
+    }
+  }
+  &:hover {
+    .roomdetails-overlay {
+      top: 60px;
+      position: absolute;
+    }
+  }
+}

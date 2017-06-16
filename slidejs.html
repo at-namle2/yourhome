@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image SlideShow</title>
+    <meta charset="utf-8" />
+    <script>
+      var i = 0,
+      images = [
+        "images/slide/slide1.jpg",
+        "images/slide/slide2.jpg",
+        "images/slide/slide1.jpg",
+        "images/slide/slide2.jpg"
+      ];
+      function Slide(param) {
+        if ( param == 'next' )
+        {
+          i++;
+          if ( i == images.length) {
+            i = images.length - 1;
+          }
+          document.getElementById( 'slide' ).src = images[i];
+        }
+        else {
+          i--;
+          if ( i < 0 ) {
+            i = 0;
+          }
+          document.getElementById( 'slide' ).src = images[i];
+        }
+      }
+    </script>
+</head>
+<body>
+    <img src="images/slide/slide1.jpg" id="slide" width="400" height="200" />
+    <button onclick="Slide( 'next' );">Next</button>
+    <button onclick="Slide( 'Previous' );">Previous</button>
+</body>
+</html>
