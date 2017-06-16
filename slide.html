@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+  <style type="text/css" media="screen">
+    .slides-container {
+      width: 80%;
+      height: 450px;
+      border: 1px solid red;
+      margin: 0 auto;
+      position: relative;
+    }
+     .slides-container img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+     }
+     .btn {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 25px;
+        top: 200px;
+     }
+     .btn2 {
+        position: absolute;
+        right: 0;
+     }
+     .img-slide { display: block; }
+  </style>
+</head>
+<body>
+  <div class="slides-container">
+    <img src="images/slide/slide1.jpg" alt="" class="slides img-slide">
+    <img src="images/slide/slide2.jpg" alt="" class="slides img-slide">
+    <img src="images/slide/slide1.jpg" alt="" class="slides img-slide">
+    <img src="images/slide/slide2.jpg" alt="" class="slides img-slide">
+    <button class="btn" onclick="plusIndex(-1)">&#10094;</button>
+    <button class="btn btn2" onclick="plusIndex(1)">&#10095;</button>
+  </div>
+  <script type="text/javascript">
+    var index = 0;
+    function plusIndex(n) {
+      index = index + 1;
+      showImage(index);
+    }
+    showImage(1);
+    function showImage(n) {
+      var i;
+      var x;
+      x = document.getElementsByClassName("slides");
+      if(n > x.length) { index = 1 };
+      if(n < 1) { index = x.length };
+      for(i=0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[index-1].style.display = "block";
+    }
+    // autoSlide();
+    // function autoSlide() {
+    //   var i;
+    //   var x = document.getElementsByClassName("slides");
+    //   for(i=0; i < x.length; i++) {
+    //     x[i].style.display = "none";
+    //   }
+    //   if( index > x.length) { index = 1}
+    //   x[index-1].style.display = "block";
+    //   index ++;
+    //   setTimeout(autoSlide, 2000);
+    // }
+  </script>
+</body>
+</html>

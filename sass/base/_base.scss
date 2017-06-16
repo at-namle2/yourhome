@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color:map-get($color, black-2);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  background: transparent;
+}
+.bg-color-gray {
+  background: map-get($color, gray);
+}
+.bg-color-footer {
+  background: map-get($color, gray-2);
+}
+.bg-color-copy {
+  background: map-get($color, black);
+}
+.recent-pro {
+  padding: 50px 0 50px;
+}
+h1, h2 , h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+.font-releway {
+  font-family: 'Raleway', sans-serif;
+}
+.font-lato {
+  font-family: 'Lato', sans-serif;
+}
+.font-opensans {
+  font-family: 'Open Sans', sans-serif;
+}
+.font-size-12 {
+  font-size: 12px;
+}
+.font-size-14 {
+  font-size: 14px;
+}
+.font-size-16 {
+  font-size: 16px;
+}
+.font-size-18 {
+  font-size: 18px;
+}
+.font-size-20 {
+  font-size: 20px;
+}
+.font-size-22 {
+  font-size: 22px;
+}
+.font-size-24 {
+  font-size: 24px;
+}
+.font-size-30 {
+  font-size: 30px;
+}
+.font-size-32 {
+  font-size: 32px;
+}
+.font-size-34 {
+  font-size: 34px;
+}
+.font-size-40 {
+  font-size: 40px;
+}
+.font-size-48 {
+  font-size: 48px;
+}
+.font-size-80 {
+  font-size: 80px;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}

@@ -1,0 +1,120 @@
+.footer-infor {
+  background: map-get($color, green);
+  height: 108px;
+  .desc-if {
+    float: left;
+    color: map-get($color, white);
+    padding-top: 46px;
+  }
+  .make-r {
+    float: right;
+    color: map-get($color, white);
+    padding: 10px 20px;
+    border: 2px solid map-get($color, white);
+    margin-top: 36px;
+    &:hover {
+      background: map-get($color, gray-2);
+    }
+    .make-a {
+      color: map-get($color, white);
+      text-decoration: none;
+    }
+  }
+}
+.footer-about {
+  padding: 30px 0 30px;
+  .gallary {
+    @extend %clearfix;
+    width: 100%;
+    .gallary-item {
+      @extend %gallary-item;
+      .gallary-img {
+        width: 100%;
+      }
+    }
+  }
+  .ali {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    color: map-get($color, white);
+    &:after {
+      content: '';
+      width: 50px;
+      position: absolute;
+      height: 3px;
+      left: 0;
+      bottom: 0;
+      background: map-get($color, green);
+    }
+  }
+  .menu-f {
+    padding-top: 10px;
+    .menu-f-item {
+      line-height: 30px;
+      &:before {
+        content: "\f0a4";
+        font-family: "FontAwesome";
+        color: map-get($color, gray-4);
+        padding: 0 10px;
+      }
+      .fa-a {
+        @include transition(all 0.5s linear);
+        text-decoration: none;
+        text-transform: capitalize;
+        color: map-get($color, gray-4);
+        &:hover {
+          color: map-get($color, white);
+        }
+      }
+    }
+  }
+}
+.icon-text {
+  margin-bottom: 10px;
+  &.tex {
+    padding-top: 20px;
+  }
+  .icon {
+    display: table-cell;
+    width: 40px;
+    vertical-align: top;
+    .fa-i {
+      @include border-radius(50%);
+      width: 24px;
+      height: 24px;
+      background: map-get($color, gray-5);
+      line-height: 24px;
+      &:before {
+        display: inline-block;
+        vertical-align: middle;
+        color: map-get($color, gray-6);
+      }
+    }
+  }
+  .text {
+    display: table-cell;
+    color: map-get($color, gray-4);
+  }
+}
+.copyright {
+  padding: 20px 0;
+  color: map-get($color, gray-4);
+}
+.top-down {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  display: inline;
+  .fa-up {
+    @include transition(all 0.2s linear);
+    @include border-radius(50%);
+    width: 50px;
+    height: 50px;
+    background: map-get($color, green);
+    color: map-get($color, white);
+    line-height: 42px;
+    opacity: 0.5;
+  }
+}
