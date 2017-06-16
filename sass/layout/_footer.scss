@@ -83,18 +83,18 @@
       @include border-radius(50%);
       width: 24px;
       height: 24px;
-      background: map-get($color, gray-4);
+      background: map-get($color, gray-5);
+      line-height: 24px;
       &:before {
-        padding: 6px 6px;
         display: inline-block;
         vertical-align: middle;
-        color: map-get($color, white);
+        color: map-get($color, gray-6);
       }
     }
   }
   .text {
     display: table-cell;
-    color: map-get($color, white);
+    color: map-get($color, gray-4);
   }
 }
 .copyright {

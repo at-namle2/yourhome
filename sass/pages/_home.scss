@@ -437,6 +437,16 @@
   }
 .slides-here {
   height: 350px;
+  position: relative;
+  .over-answer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: map-get($color, black-3);
+    opacity: 0.8;
+  }
   &.slides-he1 {
     background: url(../images/slide/slide2.jpg) no-repeat;
     background-size: cover;
@@ -444,6 +454,10 @@
   &.slides-he2 {
     background: url(../images/slide/slide1.jpg) no-repeat;
     background-size: cover;
+  }
+  .well {
+    position: absolute;
+    left: 30%;
   }
   .answer {
     display: block;
@@ -460,8 +474,8 @@
       margin: 0 auto;
      .btn {
         position: absolute;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         border: none;
         border-radius: 25px;
         top: 260px;
@@ -505,6 +519,9 @@
       color: map-get($color, white);
       .title-athor {
         padding: 10px 0 10px;
+      }
+      .title-name {
+        padding-left: 24px;
       }
     }
   }
